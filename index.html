@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>xVIP</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -19,7 +19,6 @@
       overflow: hidden;
     }
 
-    /* Преленд */
     .preland {
       position: fixed;
       top: 0; left: 0;
@@ -61,21 +60,21 @@
     }
 
     .arrow {
-      width: 60px;
-      height: 60px;
+      width: 50px;
+      height: 50px;
       background: url('https://i.imgur.com/FfTgPQ6.png') no-repeat center;
       background-size: contain;
       position: absolute;
-      top: 10px;
-      right: 10px;
-      animation: bounceRight 1.5s infinite;
-      transform: rotate(45deg);
+      top: 15px;
+      right: 15px;
+      animation: bounceArrow 1.5s infinite;
+      transform: rotate(0deg);
       z-index: 1000;
     }
 
-    @keyframes bounceRight {
-      0%, 100% { transform: rotate(45deg) translateY(0); }
-      50% { transform: rotate(45deg) translateY(-10px); }
+    @keyframes bounceArrow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
 
     @keyframes glow {
@@ -123,7 +122,10 @@
       gap: 20px;
       z-index: 1;
       align-items: center;
-      position: relative;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       padding: 20px;
       width: 100%;
     }
@@ -135,10 +137,6 @@
       color: #fff;
       text-transform: uppercase;
       letter-spacing: 8px;
-      position: fixed;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
       text-align: center;
       z-index: 2;
       white-space: nowrap;
@@ -231,16 +229,16 @@
 </head>
 <body>
   <div class="preland">
-    <h2>Как открыть ссылку:</h2>
-    <div class="instruction-step">1. Нажми на <b>три точки</b> в правом верхнем углу</div>
-    <div class="instruction-step">2. Выбери <b>Открыть в браузере</b></div>
+    <h2>How to open the link:</h2>
+    <div class="instruction-step">1. Tap the <b>three dots</b> in the top right corner</div>
+    <div class="instruction-step">2. Select <b>Open in browser</b></div>
     <div class="arrow"></div>
   </div>
 
   <div class="video-container">
     <video autoplay loop muted>
       <source src="https://raw.githubusercontent.com/deadforlov/xvip/refs/heads/main/0501.mp4" type="video/mp4">
-      Ваш браузер не поддерживает тег video.
+      Your browser does not support the video tag.
     </video>
   </div>
 
@@ -257,7 +255,7 @@
         document.querySelector('.video-container').style.display = 'block';
         document.querySelector('.container').style.display = 'flex';
       }, 1000);
-    }, 12000); // 12 секунд
+    }, 12000); // 12 seconds
   </script>
 </body>
 </html>
