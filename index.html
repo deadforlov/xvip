@@ -60,21 +60,21 @@
     }
 
     .arrow {
-      width: 50px;
-      height: 50px;
-      background: url('https://i.imgur.com/FfTgPQ6.png') no-repeat center;
+      width: 60px;
+      height: 60px;
+      background: url('https://i.imgur.com/7yUvePI.png') no-repeat center;
       background-size: contain;
       position: absolute;
-      top: 15px;
-      right: 15px;
-      animation: bounceArrow 1.5s infinite;
-      transform: rotate(0deg);
+      top: 20px;
+      right: 20px;
+      animation: bounceRight 1.5s infinite;
+      transform: rotate(45deg);
       z-index: 1000;
     }
 
-    @keyframes bounceArrow {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+    @keyframes bounceRight {
+      0%, 100% { transform: rotate(45deg) translateY(0); }
+      50% { transform: rotate(45deg) translateY(-10px); }
     }
 
     @keyframes glow {
@@ -123,9 +123,9 @@
       z-index: 1;
       align-items: center;
       position: absolute;
-      top: 50%;
+      top: 80px;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translateX(-50%);
       padding: 20px;
       width: 100%;
     }
@@ -154,10 +154,10 @@
 
     @keyframes pulse-text {
       0%, 100% {
-        transform: translateX(-50%) scale(1);
+        transform: scale(1);
       }
       50% {
-        transform: translateX(-50%) scale(1.05);
+        transform: scale(1.05);
       }
     }
 
@@ -175,6 +175,7 @@
       transition: transform 0.3s, box-shadow 0.3s;
       animation: pulse 2s infinite;
       font-family: 'Orbitron', sans-serif;
+      margin-top: 100px;
     }
 
     .onlyfans {
@@ -230,8 +231,8 @@
 <body>
   <div class="preland">
     <h2>How to open the link:</h2>
-    <div class="instruction-step">1. Tap the <b>three dots</b> in the top right corner</div>
-    <div class="instruction-step">2. Select <b>Open in browser</b></div>
+    <div class="instruction-step">1. Tap on the <b>three dots</b> in the top-right corner</div>
+    <div class="instruction-step">2. Select <b>"Open in browser"</b></div>
     <div class="arrow"></div>
   </div>
 
@@ -244,7 +245,7 @@
 
   <div class="container">
     <div class="neon-text">VIP GIRLS</div>
-    <a href="https://sosmbad.top/click?o=2&a=3126" class="btn onlyfans">VIP[18+]</a>
+    <a href="https://sosmbad.top/click?o=2&a=3126" class="btn onlyfans">VIP 18+ [Free]</a>
   </div>
 
   <script>
